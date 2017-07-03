@@ -4,6 +4,7 @@ from slackclient import SlackClient
 
 app = Flask(__name__)
 # outgoing webhook token
+# $ export SLACK_WEBHOOK_SECRET='xxxxxxxxxxx'
 SLACK_WEBHOOK_SECRET = os.environ.get('SLACK_WEBHOOK_SECRET')
 # dark sky api token
 FORECAST_TOKEN = os.environ.get('FORECAST_TOKEN')
