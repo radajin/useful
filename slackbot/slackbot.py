@@ -51,7 +51,6 @@ def naverRank():
 @app.route('/slack', methods=['POST'])
 def inbound():
     username = request.form.get('user_name')
-    print(username)
     if username != 'slackbot':
         if request.form.get('token') == SLACK_WEBHOOK_SECRET:
             channel_name = request.form.get('channel_name')
